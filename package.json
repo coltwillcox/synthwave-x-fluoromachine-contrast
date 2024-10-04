@@ -11,7 +11,7 @@
 		"url": "https://github.com/coltwillcox/synthwave-x-fluoromachine-contrast"
 	},
 	"engines": {
-		"vscode": "^1.88.1"
+		"vscode": "^1.93.1"
 	},
 	"keywords": [
 		"retro",
