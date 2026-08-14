@@ -34,43 +34,47 @@ dd .monaco-keybinding .monaco-keybinding-key {
 	position: relative;
 }
 
-.mtk3 {
+/* Token colors are scoped under .monaco-editor so they outrank the theme's own
+   `.mtkN { color: … }` rules, which VS Code appends to <head> at runtime.
+   Custom CSS and JS Loader 7.5.1 moved its injection from before </html> to the
+   end of <head>, so a bare `.mtkN` here would tie on specificity and lose. */
+.monaco-editor .mtk3 {
 	color: #ff6a00;
 	text-shadow: 0 0 2px #001716, 0 0 5px #03edf933, 0 0 10px #ffff6633;
 }
 
-.mtk6 {
+.monaco-editor .mtk6 {
 	color: #61e2ff;
 	text-shadow: 0 0 2px #001716, 0 0 5px #03edf933, 0 0 10px #ffff6633;
 }
 
-.mtk3.mtki {
+.monaco-editor .mtk3.mtki {
 	font-style: italic;
 	color: #ffffff;
 }
 
 /* Strings in code */
-.mtk4,
-.mtk11,
-.mtk14 {
+.monaco-editor .mtk4,
+.monaco-editor .mtk11,
+.monaco-editor .mtk14 {
 	color: #743ad5;
 }
 
-.mtk8,
-.mtk9 {
+.monaco-editor .mtk8,
+.monaco-editor .mtk9 {
 	color: #ffcc00;
 	text-shadow: 0 0 2px #100c0f, 0 0 3px #ffaa0099, 0 0 5px #ffaa0099, 0 0 10px #ffaa0099;
 	font-style: italic;
 }
 
-.mtk5,
-.mtk7,
-.mtk10 {
+.monaco-editor .mtk5,
+.monaco-editor .mtk7,
+.monaco-editor .mtk10 {
 	color: #fc199a;
 	text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 10px #fc199a, 0 0 2px #fc199a;
 }
 
-.mtk10 {
+.monaco-editor .mtk10 {
 	font-style: italic;
 }
 
@@ -78,23 +82,6 @@ dd .monaco-keybinding .monaco-keybinding-key {
 .monaco-editor-background,
 .monaco-editor .inputarea.ime-input {
 	background: transparent;
-}
-
-.monaco-workbench .part.editor > .content.empty .editor-group-container.empty > .editor-group-letterpress {
-	background-size: 400px 400px;
-	background-repeat: no-repeat;
-	height: 100%;
-}
-
-.monaco-workbench .part.editor > .content .editor-group-container.empty > .editor-group-letterpress {
-	display: block;
-	margin: auto;
-	width: 100%;
-	height: calc(100% - 70px);
-	max-width: 400px;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 70% 70%;
 }
 
 .editor-container {
