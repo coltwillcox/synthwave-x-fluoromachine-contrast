@@ -218,6 +218,15 @@ canvas {
 	border-radius: 0px !important;
 }
 
+/* Hover tooltips */
+.monaco-editor .monaco-resizable-hover,
+.monaco-editor .monaco-resizable-hover > .monaco-hover,
+.monaco-editor .monaco-hover .hover-row,
+.monaco-hover.workbench-hover,
+.monaco-hover.workbench-hover.with-pointer {
+	border-radius: 0px !important;
+}
+
 .monaco-editor .line-numbers {
 	text-shadow: 0 0 5px #743ad5;
 }
