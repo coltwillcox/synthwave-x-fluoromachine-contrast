@@ -262,7 +262,7 @@ canvas {
 	color: #ffd318;
 }
 
-.monaco-editor .view-overlays .current-line-exact {
+.monaco-workbench .monaco-editor .view-overlays .current-line-exact {
 	border: 1px solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(to left, #743ad5, #f222ff, #743ad5);
