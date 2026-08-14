@@ -113,7 +113,7 @@ dd .monaco-keybinding .monaco-keybinding-key {
 .monaco-editor:before,
 .editor-group-container:before {
 	background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, #fff 2px, #fff 4px);
-	background-size: 100% 4px cover;
+	background-size: 100% 4px;
 	transform-origin: 50% 50%;
 	content: '';
 	opacity: 0.02;
