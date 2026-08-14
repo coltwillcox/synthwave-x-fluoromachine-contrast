@@ -37,7 +37,8 @@
 		]
 	},
 	"scripts": {
-		"package": "vsce package",
-		"publish": "vsce publish"
+		"build:lowspec": "node build-lowspec.js",
+		"package": "npm run build:lowspec && vsce package",
+		"publish": "npm run build:lowspec && vsce publish"
 	}
 }

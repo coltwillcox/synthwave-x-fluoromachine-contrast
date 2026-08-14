@@ -1,7 +1,6 @@
 /* Start screen keys */
 dd .monaco-keybinding .monaco-keybinding-key {
 	color: #03edf9;
-	animation: pulse 1s linear infinite;
 }
 
 /* Start screen tooltips */
@@ -13,7 +12,6 @@ dd .monaco-keybinding .monaco-keybinding-key {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: shine 1s linear infinite;
 }
 
 /* Sweet sunset dots */
@@ -405,7 +403,6 @@ canvas {
 .mtk7:hover,
 .mtk10:hover {
 	text-shadow: 12 12 25px;
-	animation: pulse 1s infinite ease-in-out;
 }
 
 /* Tooltips */
@@ -413,7 +410,6 @@ canvas {
 	background-color: #262335;
 	display: block !important;
 	opacity: 1;
-	animation: tooltippulse 2s infinite linear;
 }
 
 .monaco-editor .monaco-hover.hidden {
@@ -431,7 +427,6 @@ canvas {
 	background-size: 200% 200%;
 	width: 100%;
 	background-image: linear-gradient(to right, #743ad5, #f222ff, #743ad5);
-	animation: shine 2s linear infinite;
 }
 
 .monaco-editor .selected-text {
@@ -442,17 +437,11 @@ canvas {
 
 .monaco-editor .cursor {
 	box-shadow: 0 0 15px 2px #00c3ff;
-	animation: cursor 1s infinite ease-in-out;
-}
-
-.editor-group-container:after {
-	animation: flight 2s infinite linear;
 }
 
 .view-line .inline-folded:after {
 	color: yellow;
 	border-radius: 5px;
-	animation: colapse 2s linear;
 }
 
 .monaco-editor .minimap-shadow-visible {
@@ -900,21 +889,68 @@ canvas {
 	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	@keyframes shine {
-		to {
-			background-position: -200% center;
-		}
+@keyframes shine {
+	to {
+		background-position: -200% center;
 	}
-	@keyframes pulse {
-		0% {
-			color: #03edf9;
-		}
-		50% {
-			color: #fc28a8;
-		}
-		100% {
-			color: #03edf9;
-		}
+}
+
+@keyframes pulse {
+	0% {
+		color: #03edf9;
 	}
+	50% {
+		color: #fc28a8;
+	}
+	100% {
+		color: #03edf9;
+	}
+}
+
+/* ── Animations ──────────────────────────────────────────────────────────────
+   Every animation is gated on .monaco-enable-motion, which VS Code sets on
+   .monaco-workbench whenever motion is allowed. To turn the animations off,
+   add to settings.json:
+
+     "workbench.reduceMotion": "on"
+
+   The default, "auto", already follows the OS reduced-motion preference. This
+   replaces the separate synthwave-lowspec.css, which is now deprecated.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.monaco-enable-motion dd .monaco-keybinding .monaco-keybinding-key {
+	animation: pulse 1s linear infinite;
+}
+
+.monaco-enable-motion .watermark-box dl dt {
+	animation: shine 1s linear infinite;
+}
+
+.monaco-enable-motion .monaco-editor .monaco-hover {
+	animation: tooltippulse 2s infinite linear;
+}
+
+.monaco-enable-motion .monaco-editor .monaco-hover::after {
+	animation: shine 2s linear infinite;
+}
+
+.monaco-enable-motion .monaco-editor .cursor {
+	animation: cursor 1s infinite ease-in-out;
+}
+
+.monaco-enable-motion .editor-group-container:after {
+	animation: flight 2s infinite linear;
+}
+
+.monaco-enable-motion .view-line .inline-folded:after {
+	animation: colapse 2s linear;
+}
+
+.monaco-enable-motion .mtk8:hover,
+.monaco-enable-motion .mtk9:hover,
+.monaco-enable-motion .mtk3:hover,
+.monaco-enable-motion .mtk6:hover,
+.monaco-enable-motion .mtk7:hover,
+.monaco-enable-motion .mtk10:hover {
+	animation: pulse 1s infinite ease-in-out;
 }
