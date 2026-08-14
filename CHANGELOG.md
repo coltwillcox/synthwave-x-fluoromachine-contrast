@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.2.2
+
+- Restored the gradient border on the current editor line. VS Code generates a rule
+  for `editor.lineHighlightBorder` using the same selector, and its `border`
+  shorthand reset `border-image`. Since Custom CSS and JS Loader 7.5.1 injects into
+  `<head>`, that rule now lands last, so the theme's selector needed higher
+  specificity to win.
+
 ## 3.2.1
 
 - Declared the MIT licence, homepage, issue tracker and Marketplace banner colour in

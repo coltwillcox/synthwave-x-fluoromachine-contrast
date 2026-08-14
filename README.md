@@ -40,8 +40,8 @@ Until then, the following steps must be performed to install the theme:
 ```json
 {
   "vscode_custom_css.imports": [
-    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.1/logo.css",
-    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.1/synthwave.css"
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.2/logo.css",
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.2/synthwave.css"
   ]
 }
 ```
