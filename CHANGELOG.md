@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.2.1
+
+- Declared the MIT licence, homepage, issue tracker and Marketplace banner colour in
+  `package.json`, and added this changelog.
+- Fixed the scanline overlay's `background-size: 100% 4px cover`, which mixed lengths
+  with a keyword and was therefore invalid.
+- Removed a duplicate `.monaco-editor .cursor` rule whose `box-shadow` was silently
+  overridden by a later one.
+
 ## 3.2.0
 
 **Fixed compatibility with Custom CSS and JS Loader 7.5.1.** That release moved its
@@ -21,10 +30,6 @@ The default, `"auto"`, follows your operating system's reduced-motion preference
   you would rather not update the path on every release.
 - Fixed the hover glow on syntax tokens. `text-shadow: 12 12 25px` had unitless
   lengths, so the declaration had been dropped by the CSS parser since 2.0.0.
-- Fixed the scanline overlay's `background-size: 100% 4px cover`, which mixed lengths
-  with a keyword and was therefore invalid.
-- Removed a duplicate `.monaco-editor .cursor` rule whose `box-shadow` was silently
-  overridden by a later one.
 - Trimmed the published package from 1.6 MB to 325 KB by excluding files the extension
   does not load.
 
