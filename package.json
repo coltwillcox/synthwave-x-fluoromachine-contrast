@@ -37,8 +37,9 @@
 		]
 	},
 	"scripts": {
+		"vscode:prepublish": "npm run build:lowspec",
 		"build:lowspec": "node build-lowspec.js",
-		"package": "npm run build:lowspec && vsce package",
-		"publish": "npm run build:lowspec && vsce publish"
+		"package": "vsce package",
+		"publish": "vsce publish"
 	}
 }
