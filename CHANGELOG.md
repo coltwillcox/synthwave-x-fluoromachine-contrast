@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.2.3
+
+- Removed the rounded corners VS Code applies to the commit message box, the Commit
+  button, the Search and Extensions input boxes, the quick input field used by the
+  branch picker and command palette, and hover tooltips. Buttons are squared
+  workbench-wide rather than per view.
+- Fixed the commit message box's right border being hidden. The theme's editor
+  background gradient matches every `.monaco-editor`, including the one inside that
+  box, and painted over the border; the commit box now shows the input background
+  instead.
+
 ## 3.2.2
 
 - Restored the gradient border on the current editor line. VS Code generates a rule
