@@ -199,11 +199,10 @@ canvas {
 	border-radius: 0px !important;
 }
 
-/* Commit button, including its dropdown half */
-.scm-view .monaco-button,
-.scm-view .monaco-button-dropdown > .monaco-button,
-.scm-view .monaco-button-dropdown > .monaco-button.monaco-text-button,
-.scm-view .monaco-button-dropdown > .monaco-button.monaco-dropdown-button {
+/* Buttons: Commit and its dropdown half, welcome-view buttons such as
+   "Forward a Port", dialog buttons */
+.monaco-button,
+.monaco-text-button {
 	border-radius: 0px !important;
 }
 
