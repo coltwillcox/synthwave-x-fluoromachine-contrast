@@ -191,6 +191,28 @@ canvas {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* Commit message box */
+.scm-view .scm-editor,
+.scm-editor-container .monaco-editor,
+.scm-editor-container .monaco-editor .overflow-guard,
+.scm-editor-validation-container {
+	border-radius: 0px !important;
+}
+
+/* Commit button, including its dropdown half */
+.scm-view .monaco-button,
+.scm-view .monaco-button-dropdown > .monaco-button,
+.scm-view .monaco-button-dropdown > .monaco-button.monaco-text-button,
+.scm-view .monaco-button-dropdown > .monaco-button.monaco-dropdown-button {
+	border-radius: 0px !important;
+}
+
+/* Search and Extensions input boxes */
+.search-view .monaco-inputbox,
+.extensions-viewlet .suggest-input-container {
+	border-radius: 0px !important;
+}
+
 .monaco-editor .line-numbers {
 	text-shadow: 0 0 5px #743ad5;
 }
