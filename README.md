@@ -37,26 +37,29 @@ Until then, the following steps must be performed to install the theme:
 2. Install [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) VS Code extension
 3. Link the CSS file from this extension in your VS Code settings.json:
 
-```
-On Mac it might look something like the snippet below:
-
+```json
 {
   "vscode_custom_css.imports": [
-    "file:///Users/{your username}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/logo.css",
-    "file:///Users/{your username}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/synthwave.css"
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/logo.css",
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/synthwave.css"
   ]
 }
-
-Windows might resemble:
-
-{
-  "vscode_custom_css.imports": [
-    "file:///C:/Users/{your username}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/logo.css",
-    "file:///C:/Users/{your username}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.0/synthwave.css"
-  ]
-}
-
 ```
+
+`${userHome}` is expanded by the loader, so the same snippet works on Linux, macOS and Windows. If you use VSCodium the extensions folder is `.vscode-oss` instead of `.vscode`, and VS Code Insiders uses `.vscode-insiders`.
+
+> **The version number in the path has to be updated when this extension updates.** The loader resolves each import as a single literal path, so wildcards are not supported and there is no variable for the extension version. If you would rather never touch it again, the loader also accepts `https:` URLs, so you can point at this repository instead and the path will never change:
+>
+> ```json
+> {
+>   "vscode_custom_css.imports": [
+>     "https://raw.githubusercontent.com/coltwillcox/synthwave-x-fluoromachine-contrast/master/logo.css",
+>     "https://raw.githubusercontent.com/coltwillcox/synthwave-x-fluoromachine-contrast/master/synthwave.css"
+>   ]
+> }
+> ```
+>
+> The files are fetched only when you run `Reload Custom CSS and JS`, not on every startup. The trade-off is that you need a network connection at that moment, and you always get the latest `master` rather than the version you installed.
 
 4. To turn the animations off (low spec machines, or just personal taste), add to the same `settings.json`:
 
