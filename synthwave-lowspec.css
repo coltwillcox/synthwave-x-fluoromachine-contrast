@@ -407,7 +407,7 @@ canvas {
 .mtk6:hover,
 .mtk7:hover,
 .mtk10:hover {
-	text-shadow: 12 12 25px;
+	text-shadow: 0 0 25px currentColor;
 }
 
 /* Tooltips */
