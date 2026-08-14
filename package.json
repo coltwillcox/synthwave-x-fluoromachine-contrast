@@ -5,21 +5,30 @@
 	"version": "3.2.0",
 	"author": "Colt Willcox",
 	"publisher": "coltwillcox",
+	"license": "MIT",
 	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#241b2f",
+		"theme": "dark"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/coltwillcox/synthwave-x-fluoromachine-contrast"
+	},
+	"homepage": "https://github.com/coltwillcox/synthwave-x-fluoromachine-contrast#readme",
+	"bugs": {
+		"url": "https://github.com/coltwillcox/synthwave-x-fluoromachine-contrast/issues"
 	},
 	"engines": {
 		"vscode": "^1.93.1"
 	},
 	"keywords": [
+		"synthwave",
+		"vaporwave",
 		"retro",
 		"80s",
-		"vaporwave",
-		"synthwave",
-		"fluoromachine",
 		"animated",
+		"fluoromachine",
 		"theme",
 		"violet",
 		"dark"
