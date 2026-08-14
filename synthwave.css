@@ -213,6 +213,11 @@ canvas {
 	border-radius: 0px !important;
 }
 
+/* Quick input filter field (branch picker, command palette) */
+.quick-input-widget .quick-input-filter .monaco-inputbox {
+	border-radius: 0px !important;
+}
+
 .monaco-editor .line-numbers {
 	text-shadow: 0 0 5px #743ad5;
 }
