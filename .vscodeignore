@@ -1,5 +1,24 @@
+# NOTE: vsce reads this file only -- .gitignore has no effect on packaging.
+# Anything not listed here ships to the marketplace, including untracked files.
+
+# Editor / tooling
 .vscode/**
 .vscode-test/**
+.claude/**
 .gitignore
 vsc-extension-quickstart.md
+
+# Repo metadata, not needed by the installed extension
+.github/**
+TODO.txt
+
+# Build script; its output (synthwave-lowspec.css) is what ships
 build-lowspec.js
+
+# Source image for the base64 logo embedded in logo.css. Kept in the repo as
+# the original asset, but the extension loads the logo from logo.css.
+logo.png
+
+# Referenced by README via absolute raw.githubusercontent.com URLs, so they
+# are served from GitHub rather than from the package.
+screens/**
