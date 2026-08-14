@@ -199,6 +199,14 @@ canvas {
 	border-radius: 0px !important;
 }
 
+/* Keep the editor background gradient out of the commit box, so the box shows
+   the input background and its border stays visible */
+.scm-editor-container .monaco-editor,
+.scm-editor-container .monaco-editor-background {
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
 /* Buttons: Commit and its dropdown half, welcome-view buttons such as
    "Forward a Port", dialog buttons */
 .monaco-button,
