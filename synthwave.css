@@ -182,7 +182,7 @@ canvas {
 
 .monaco-editor .cursor {
 	background: linear-gradient(to bottom, #8a2dc0, #fc28a8);
-	box-shadow: 0 0 5px #fc199a;
+	box-shadow: 0 0 15px 2px #00c3ff;
 	border-color: #8a2dc0;
 	color: #241b2f;
 }
@@ -433,10 +433,6 @@ canvas {
 	background-color: #ff008d55 !important;
 	box-shadow: 0 0 35px 5px #ff008d55;
 	color: #fff !important;
-}
-
-.monaco-editor .cursor {
-	box-shadow: 0 0 15px 2px #00c3ff;
 }
 
 .view-line .inline-folded:after {
