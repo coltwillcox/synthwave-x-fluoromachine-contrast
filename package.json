@@ -37,6 +37,9 @@
 		"Themes"
 	],
 	"contributes": {
+		"configurationDefaults": {
+			"workbench.experimental.modernUI": false
+		},
 		"themes": [
 			{
 				"label": "Synthwave x Fluoromachine & epic animations & contrast",
