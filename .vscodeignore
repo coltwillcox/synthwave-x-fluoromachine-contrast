@@ -22,3 +22,6 @@ logo.png
 # Referenced by README via absolute raw.githubusercontent.com URLs, so they
 # are served from GitHub rather than from the package.
 screens/**
+
+# Local npm lockfile; the extension has no dependencies
+package-lock.json

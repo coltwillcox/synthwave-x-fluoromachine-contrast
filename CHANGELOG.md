@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.2.4
+
+- The extension now defaults `workbench.experimental.modernUI` to `false`, since the
+  theme's CSS targets the classic workbench layout. It is a default only, so setting it
+  in your own `settings.json` still takes precedence.
+- Stopped shipping the local `package-lock.json` in the Marketplace package.
+
 ## 3.2.3
 
 - Removed the rounded corners VS Code applies to the commit message box, the Commit

@@ -40,8 +40,8 @@ Until then, the following steps must be performed to install the theme:
 ```json
 {
   "vscode_custom_css.imports": [
-    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.3/logo.css",
-    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.3/synthwave.css"
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.4/logo.css",
+    "file:///${userHome}/.vscode/extensions/coltwillcox.synthwave-x-fluoromachine-contrast-3.2.4/synthwave.css"
   ]
 }
 ```
@@ -72,6 +72,8 @@ Until then, the following steps must be performed to install the theme:
 The default, `"auto"`, follows your operating system's reduced-motion preference. This takes effect immediately, with no need to re-run `Reload Custom CSS and JS`.
 
 > **Deprecated:** `synthwave-lowspec.css` still ships and still works, but it is now generated from `synthwave.css` and will be removed in a future release. Use `"workbench.reduceMotion"` instead.
+
+> **Note:** installing this extension sets `"workbench.experimental.modernUI": false` as a default, because the theme's CSS is written for the classic workbench layout. You can override it in your own `settings.json`.
 
 5. `logo.css` is optional and changes VS Code logo.
 6. From the command panel, select `Reload Custom CSS and JS`. You'll need to run this command every time vscode updates.
